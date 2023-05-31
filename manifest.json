@@ -1,0 +1,23 @@
+{
+    "name": "history",
+    "version": "0.0.0.1",
+    "manifest_version": 3,
+    "description": "",
+     "icons": {
+    },
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [
+        "history", "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+      "content_scripts": [
+        {
+          "matches": ["*://*/*"],
+          "js": ["content/index.js"]
+        }
+      ]
+}
